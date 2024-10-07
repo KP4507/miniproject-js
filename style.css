@@ -1,0 +1,16 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif ;
+}
+
+body{
+  
+    background-image: url(image1.jpg);
+    background-position: center;
+    background-size: cover;
+    color: rgb(14, 14, 13);
+}

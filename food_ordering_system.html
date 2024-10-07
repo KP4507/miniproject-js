@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Ordering System</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body{
+  
+             background-image: url(image1.jpg);
+             background-position: center;
+             background-size: cover;
+             color: rgb(228, 141, 87);
+             display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Full viewport height */
+            margin: 0;
+            background-color: #bc5959;
+          }
+
+         #menu {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .menu-item {
+            margin: 10px 0;
+        }
+        .menu-item img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+        
+        
+        }
+        #orderSummary {
+            margin-top: 20px;
+
+        }
+        #orderSummary ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        #orderSummary li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        #orderSummary img {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+
+ 
+
+    <div id="menu">
+        <h2>Menu</h2>
+        <div class="menu-item">
+            <img src="burger.webp" alt="Burger">
+            <span style="color: darkblue;">Burger - $5.99</span>
+            <button onclick="addToOrder('Burger', 5.99, 'burger.jpg')">Add to Order</button>
+        </div>
+        <div class="menu-item">
+            <img src="pizza.jpg" alt="Pizza">
+            <span style="color: darkblue;">Pizza - $9.99</span>
+            <button onclick="addToOrder('Pizza', 9.99, 'pizza.jpg')">Add to Order</button>
+        </div>
+        <div class="menu-item">
+            <img src="pasta.webp" alt="Pasta">
+            <span style="color: darkblue;">Pasta - $7.99</span>
+            <button onclick="addToOrder('Pasta', 7.99, 'pasta.jpg')">Add to Order</button>
+        </div>
+    
+
+    <div id="orderSummary">
+        <h2>Order Summary</h2>
+        <ul id="orderList"></ul>
+        <p id="totalAmount">Total: $0</p>
+        <button onclick="placeOrder()">Place Order</button>
+    </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
